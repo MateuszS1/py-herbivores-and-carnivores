@@ -1,6 +1,3 @@
-from typing import Any
-
-
 class Animal:
     alive = []
 
@@ -31,7 +28,7 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, animal: Any) -> None:
+    def bite(self, animal: Animal) -> None:
         if not animal.hidden and animal.__class__ != self.__class__:
             animal.health -= 50
 
